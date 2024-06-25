@@ -1,0 +1,35 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: Install MinTest
+        working-directory: ./main
+        run: |
+          pwd
+          ls
+          chmod +x ./install.sh
+          ./install.sh
+        shell: bash
+      - name: Run test script
+        working-directory: ./main
+        run: |
+          chmod +x ./test.sh
+          ./test.sh
+        shell: bash
