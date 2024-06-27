@@ -4,7 +4,9 @@ Assortment of reusable regex patterns to copy and paste.
 
 ### [Browse…](./regex/)
 
-> 🟨 🟦 &ensp; 🧪 &hairsp; Targeted and tested for JavaScript environments.
+> 🧪 &hairsp; Targeted and tested for ECMAScript environments.
+
+> 🔧 &hairsp; Feel free to improve an existing, or propose a new regex.
 
 ##
 
